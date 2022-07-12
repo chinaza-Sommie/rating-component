@@ -1,0 +1,162 @@
+.card{
+    background-color: black;
+}
+
+*{
+      margin: 0;
+      padding:  0;
+    }
+
+    body{
+      background: #141519;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 650px;
+    }
+
+    .main>div h4{
+      font-size: 28px;
+      font-weight: 700;
+      color:white;
+      margin-bottom: 5px;
+    }
+
+    p{
+      /* color: hsl(216, 12%, 54%); */
+      color: hsl(217, 12%, 63%);
+      line-height: 24px;
+      padding: 10px 0;
+    }
+    .main>div{
+      background-color: #212832;
+      border-radius: 20px;
+      width: 25%;
+      padding: 30px;
+    }
+
+    .star{
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      margin-bottom: 28px;
+      background-color: #28333A;
+    }
+
+    .inputData{
+      padding: 12px 0;
+    }
+
+    input[type='text']{
+      margin-right: 18px;
+      background-color: #28333A;
+      border: none;
+      font-weight: 700;
+      color: hsl(217, 12%, 63%);
+      text-align: center;
+      padding: 8px;
+      height: 30px;
+      width: 30px;
+      outline: none;
+      border-radius: 50%;
+      transition: .5s;
+    }
+
+    input[type='text']:hover{
+      background-color: #7C8898;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type='text']:focus{
+      background-color: #FC7613;
+      color: white;
+    }
+
+    button{
+      width: 95%;
+      border: none;
+      padding: 13px 0;
+      border-radius: 30px;
+      background-color: #FC7613;
+      color: white;
+      margin-top: 15px;
+      font-size: 16px;
+      letter-spacing: 4px;
+      font-weight: 400;
+      transition: .5s;
+    }
+
+    button:hover{
+      background-color: white;
+      color: #FC7613;
+      cursor: pointer;
+    }
+
+    .ratemessage{
+      display: none;
+    }
+
+    .sec-cont{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .rate-cont{
+      background-color: #28333A;
+      color:#FC7613;
+      width: 70%;
+      padding: 5px;
+      font-size: 20px;
+      border-radius: 25px;
+      font-weight: 400;
+      margin:  20px 0;
+    }
+
+   
+  @media screen and (max-width: 600px) {
+    .main>div{
+        width: 75%;
+      }
+      .rate-cont{
+      width: 90%;
+        font: 16px;
+    }
+
+    input[type='text']{
+      margin-right: 10px; 
+      font-weight: 400;
+     
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 900px) {
+    .main>div{
+        width: 50%;
+      }
+      .rate-cont{
+      width: 80%;
+        font: 16px;
+    }
+  }
+
+  @media (min-width: 901px) and (max-width: 1080px) {
+    .main>div{
+        width: 40%;
+      }
+  }
+
+  @media (min-width: 1081px) and (max-width: 1200px) {
+    .main>div{
+        width:35%;
+      }
+  }

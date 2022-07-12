@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    
+  </style>
+  <link rel="stylesheet" type="text/css" href="./index.css"/>
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <div class="main" id="first">
+    <div>
+      <div class="star">
+        <img src="images/icon-star.svg">
+      </div>
+      <h4>How did we do?</h4>
+  
+      <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+        
+      <div  id="form" method="POST">
+          <div class="inputData" onsubmit="return initiateRate()" id="size">
+            <input type="text" name="one" value="1" readonly   >
+            <input type="text" name="two" value="2" readonly >
+            <input type="text" name="three" value="3" readonly >
+            <input type="text" name="four" value="4" readonly >
+            <input type="text" name="five" value="5" readonly  >
+          </div>
+
+          <!-- <input type="submit" name="Submit" value="SUBMIT"> -->
+          <button onclick="return initiateRate()"> SUBMIT </button>
+          
+        </div>
+  
+    </div>
+  </div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <div class="ratemessage" id="sec" >
+    <div style="text-align: center;padding-bottom: 40px;" class="sec-cont">
+      <img src="images/illustration-thank-you.svg" style=" width: 70%"/>
+
+      <div class="rate-cont">You selected <span> 0 </span> out of 5</div>
+  
+      <h4>Thank you!</h4>
+  
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+  <!-- Thank you state end -->
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Chinaza Chisom</a>.
+  </div>
+
+  <script>
+    var value = "";
+    var one = document.querySelectorAll('input');
+    var btn = document.querySelector('button');
+    var result = document.querySelector('#sec');
+    var result2 = document.querySelector('#first');
+    var span = document.querySelector('span');
+      for(i=0; i<one.length; i++){
+        one[i].addEventListener('click', initiateRate);
+      }
+      
+    function initiateRate() {
+      value = this.value;
+
+      if(value == ""){
+        value = 0;
+        btn.addEventListener('click', rate);
+      }else{
+       
+        btn.addEventListener('click', rate);
+      }    
+    }
+
+    function rate(){
+      span.textContent = value;
+      result.classList.remove("ratemessage");
+      result2.classList.add("ratemessage");   
+    }
+  
+    
+
+
+  </script>
+</body>
+</html>
